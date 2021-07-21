@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<title>Load Data Files</title>
+
+	<!--
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+	<meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+	-->
+
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+	<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+</head>
+
+<body>
+
+	<div class="container">
+
+		<form class="row g-3 needs-validation" id="loadFiles-form" novalidate>
+
+			<div class="col-4">
+				<label for="lang-input" class="form-label">lang</label>
+				<input type="text" class="form-control" id="lang-input" value="fr-FR" required>
+				<div class="valid-feedback">
+					Looks good!
+				</div>
+				<div class="invalid-feedback">
+					Please type a lang
+				</div>
+			</div>
+			<div class="col">
+				<label for="file-input" class="form-label">Large file input example</label>
+				<input class="form-control" id="file-input" type="file" webkitdirectory directory>
+			</div>
+
+			<div class="col-12 my-3">
+				<button class="btn btn-primary" type="submit">Load Data</button>
+			</div>
+
+		</form>
+
+	</div>
+
+	<!--
+	<div class="container">
+	<label for="lang-input">lang</label>
+	<input type="text" id="lang-input">
+
+	<label for="file-selector">file-selector</label>
+	<input type="file" id="file-selector">
+
+	<button id="load">load data</button>
+	</div>
+	-->
+
+	<footer>
+		<script src="../dist/Tools/rendererFormValidationDynamicDesign.js"></script>
+		<script src="../dist/FilesManagement/rendererFilesLoading.js"></script>
+	</footer>
+
+</body>
+
+</html>

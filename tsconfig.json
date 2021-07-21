@@ -5,6 +5,7 @@
     "sourceMap": true,
     "outDir": "dist",
     "baseUrl": ".",
+    "strict": true,
     "paths": {
       "*": ["node_modules/*"]
     }

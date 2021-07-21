@@ -1,0 +1,70 @@
+{
+    "type": "phase",
+    "values": {
+        "Fermentation": {
+            "next": {  
+                "type": "product",
+                "values": {
+                    "Poudre": {
+                        "rootNext" : true
+                    },
+                    "Fine de Chêne": {
+                        "rootNext" : true
+                    },
+                    "Copeaux" : {
+                        "rootNext" : true
+                    }
+                },
+                "next": "possibilities-calculation-gramsPerLiter-fr-FR.json"
+            }
+        },
+        "Elevage Court": {
+            "next": {  
+                "type": "product",
+                "values" : {
+                    "Copeaux": {
+                        "rootNext" : true
+                    },
+                    "Cubes / Dominos / Blocks": {
+                        "rootNext" : true
+                    },  
+                    "Mini Thin Tank Staves / Thin Tank Staves" : {
+                        "next": "possibilities-calculation-percentage-fr-FR.json"
+                    }
+                },
+                "next": "possibilities-calculation-gramsPerLiter-fr-FR.json"
+            }
+        },
+        "Elevage Long": {
+            "next": {
+                "type": "product",
+                "values" : {
+                    "Winewood": {
+                        "rootNext" : true
+                    },
+                    "Mini Tank Staves / Tank Staves": {
+                        "rootNext" : true
+                    },
+                    "XL Stave" : {
+                        "rootNext" : true
+                    }
+                },
+                "next": "possibilities-calculation-percentage-fr-FR.json"
+            }
+        },
+        "Kits Barriques": {
+            "next": {  
+                "type": "product",
+                "values" : {
+                    "Barrel Insert": {
+                        "rootNext" : true
+                    },
+                    "Oak Chain": {
+                        "rootNext" : true
+                    }
+                },
+                "next": "possibilities-calculation-percentage-fr-FR.json"
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "type": "unit",
+    "values": {
+        "Hectolitres": {
+            "rootNext" : true
+        },
+        "Gallons": {
+            "rootNext" : true
+        }
+    },
+    "next" : {
+        "type": "value",
+        "values": {
+            "value": {
+                "next": {
+                    "type": "gramsPerLiter",
+                    "values": {
+                        "gramsPerLiter-input" : {
+                            "end": true
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
