@@ -6,8 +6,8 @@
     "build": "tsc",
     "watch": "tsc -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
-    "start": "electron -r dotenv-flow/config ./dist/main.js",
-    "dev": "concurrently -k -n \"TypeScript,Electron\" -p \"[{name}]\" -c \"green,blue\" \"tsc -w\" \"electron -r dotenv-flow/config ./dist/main.js\""
+    "start": "electron -r dotenv-flow/config ./dist/MainProcess/main.js",
+    "dev": "concurrently -k -n \"TypeScript,Electron\" -p \"[{name}]\" -c \"green,blue\" \"tsc -w\" \"electron -r dotenv-flow/config ./dist/MainProcess/main.js\""
   },
   "repository": "https://github.com/electron/electron-quick-start-typescript",
   "keywords": [

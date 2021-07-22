@@ -4,9 +4,10 @@ import { DataEditor } from "./DataEditor";
 
 // live reload
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-require('electron-reload')(__dirname, {
-    electron: require(path.join(__dirname, `../node_modules/electron`))
-});
+/*require('electron-reload')(__dirname, {
+    electron: require(path.join(__dirname, `../../node_modules/electron`))
+});*/
+
 
 function createWindow() 
 {
@@ -16,7 +17,9 @@ function createWindow()
 		height: 1000,
 		webPreferences: {
 			preload: path.join(__dirname, "preload.js"),
-			nodeIntegration: true
+			nodeIntegration: true,
+			contextIsolation: false,
+			enableRemoteModule: true,
 		},
 	});
 

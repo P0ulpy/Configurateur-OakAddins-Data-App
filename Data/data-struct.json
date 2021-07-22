@@ -1,6 +1,6 @@
 [
     {
         "name": "choices-${lang}$.json",
-        "display-mode": "string-list"
+        "displayMode": "string-list"
     }
 ]
