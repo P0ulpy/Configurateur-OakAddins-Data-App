@@ -1,4 +1,4 @@
-type GlobalEdited = typeof global & {
+export type GlobalEdited = typeof global & {
     shared: {
         [index: string] : any
     }

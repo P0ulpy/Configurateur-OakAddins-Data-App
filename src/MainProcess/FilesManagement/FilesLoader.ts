@@ -35,7 +35,7 @@ export class FilesLoader extends EventEmitter {
 
     private dataEditor: DataEditor;
 
-    private dataStruct: DataStruct[];
+    public dataStruct: DataStruct[];
 
     constructor(options: FilesLoaderOptions)
     {
@@ -102,7 +102,8 @@ export class FilesLoader extends EventEmitter {
                 displayMode: data.displayMode
             });
         }
-
+        
+        this.emit('dataStruct-parsed', dataStruct);
         return dataStruct;
     }
 

@@ -13,7 +13,7 @@
             {
                 if (!form.checkValidity()) 
                 {
-                    //event.preventDefault();
+                    event.preventDefault();
                     event.stopPropagation();
                 }
 

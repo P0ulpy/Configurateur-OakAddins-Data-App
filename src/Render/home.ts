@@ -8,12 +8,11 @@ window.addEventListener('DOMContentLoaded', () =>
     const ipcRenderer = electron.ipcRenderer;
 
     const shared = electron.remote.getGlobal('shared');
-
-    console.log(shared);
+    console.log(shared.dataFiles);
 
     showFilesTable(shared.dataFiles);
 
-    function showFilesTable(dataFiles: any[])
+    function showFilesTable(dataFiles: any[] = [])
     {
         let header = 
         `<thead>
@@ -42,18 +41,4 @@ window.addEventListener('DOMContentLoaded', () =>
 
         DOM.table.innerHTML = header + body;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });

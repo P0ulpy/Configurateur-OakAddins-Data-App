@@ -3,19 +3,24 @@ import { EventEmitter } from "events";
 import { DataFile, FilesLoader } from "./FilesManagement/FilesLoader";
 import * as path from "path";
 import { Shared } from "./Shared";
+import { DataViewer } from "./DataManagement/DataViewer";
+import { StringListViewer } from "./DataManagement/Viewers/StringListViewer";
 
 export type DataEditorOptions = {
     mainWindow: BrowserWindow
-}
+};
 
 export const rendererPath: string = path.join(__dirname, '../../render');
 export const shared = new Shared();
 
 export class DataEditor extends EventEmitter {
 
+    public static singleton: DataEditor | null = null;
+
     public mainWindow: BrowserWindow;
 
-    public filesLoader: FilesLoader;
+    private filesLoader: FilesLoader;
+    private fileViewers: Map<string, DataViewer> = new Map<string, DataViewer>();
     
     public lang: string | null = null;
     public dataFiles: DataFile[] | null = null;
@@ -23,6 +28,13 @@ export class DataEditor extends EventEmitter {
     constructor(options: DataEditorOptions)
     {
         super();
+        
+        if(DataEditor.singleton)
+        {
+            throw Error('DataEditor is a singleton class you cant reinstanciate it');
+        }
+
+        DataEditor.singleton = this;
 
         this.mainWindow = options.mainWindow;
 
@@ -30,7 +42,24 @@ export class DataEditor extends EventEmitter {
             dataEditor: this
         });
 
+        this.filesLoader.on('dataStruct-parsed', () => this.onDataStructParsed());
         this.filesLoader.on('loaded', () => this.onFilesLoaded());
+    }
+
+    private onDataStructParsed(): void
+    {
+        for(const dataStruct of this.filesLoader.dataStruct)
+        {
+            switch(dataStruct.displayMode)
+            {
+                case 'string-list': 
+                    this.fileViewers.set(dataStruct.displayMode, new StringListViewer())
+                break;
+                default: 
+                    console.error('unknown displayMode', dataStruct.displayMode);
+            }
+
+        }
     }
 
     private onFilesLoaded(): void
@@ -42,20 +71,5 @@ export class DataEditor extends EventEmitter {
         
         shared.set('dataFiles', this.dataFiles);
         this.mainWindow.loadFile(path.join(rendererPath, "./home.html"));
-
-        /*for(const dataFile of this.dataFiles)
-        {
-            switch(dataFile.displayMode)
-            {
-                case 'string-list': 
-
-
-
-                break;
-                default:
-                    console.error(`DataEditor: dataFile displayMode "${dataFile.displayMode}" is unknown`);
-                    continue;
-            }
-        }*/
     }
 }
