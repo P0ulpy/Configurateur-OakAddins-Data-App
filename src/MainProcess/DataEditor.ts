@@ -5,6 +5,7 @@ import * as path from "path";
 import { Shared } from "./Shared";
 import { DataViewer } from "./DataManagement/DataViewer";
 import { StringListViewer } from "./DataManagement/Viewers/StringListViewer";
+import { ObjectConfigViewer } from "./DataManagement/Viewers/ObjectConfigViewer";
 
 export type DataEditorOptions = {
     mainWindow: BrowserWindow
@@ -52,9 +53,16 @@ export class DataEditor extends EventEmitter {
         {
             switch(dataStruct.displayMode)
             {
+                /* Deprecated
                 case 'string-list': 
                     this.fileViewers.set(dataStruct.displayMode, new StringListViewer())
                 break;
+                */
+
+                case 'global-config':
+                    this.fileViewers.set(dataStruct.displayMode, new ObjectConfigViewer())
+                break;
+
                 default: 
                     console.error('unknown displayMode', dataStruct.displayMode);
             }

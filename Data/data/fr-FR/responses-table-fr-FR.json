@@ -1,0 +1,372 @@
+[
+    {
+        "type" : "thead", 
+        "values" : [
+            "Temps de contact recommandé",
+            "Produits",
+            "Quantité",
+            "Quantité conditionnée"
+        ]
+    },
+    {
+        "type" : "tbody",
+        "values" : [
+            "Durée de la fermentation",
+            "Poudre <b>*</b>",
+            {
+                "Hectolitres": "(volume, gpl) => (volume * 100) * gpl / 1000",
+                "Gallons": "(volume, gpl) => volume * gpl / 1000"
+            },
+            {
+                "Hectolitres" : "(quantity) => quantity / 18",
+                "Gallons" : "(quantity) => quantity / 40"
+            }
+        ],
+        "product": "Poudre",
+        "dosage" : {
+            "Hectolitres" : "Kg",
+            "Gallons" : "Lb"
+        },
+        "quantity" : {
+            "Hectolitres": "Sacs (18kg)",
+            "Gallons": "Sacs (40 Lbs)"
+        }
+    },
+    {
+        "type" : "tbody",
+        "values" : [
+            "Durée de la fermentation",
+            "Fine de Chêne",
+            {
+                "Hectolitres": "(volume, gpl) => (volume * 100) * gpl / 1000",
+                "Gallons": "(volume, gpl) => volume * gpl / 1000"
+            },
+            {
+                "Hectolitres": "(quantity) => quantity / 18",
+                "Gallons": "(quantity) => quantity / 40"
+            }
+        ],
+        "product": "Fine de Chêne",
+        "dosage" : {
+            "Hectolitres" : "Kg",
+            "Gallons" : "Lb"
+        },
+        "quantity" : {
+            "Hectolitres": "Sacs (18kg)",
+            "Gallons": "Sacs (40 Lbs)"
+        }
+    },
+    {
+        "type" : "tbody",
+        "values" : [
+            "Fermentation ou élevage court",
+            "Copeaux",
+            {
+                "Hectolitres": "(volume, gpl) => (volume * 100) * gpl / 1000",
+                "Gallons": "(volume, gpl) => volume * gpl / 1000"
+            },
+            {
+                "Hectolitres": "(quantity) => quantity / 18",
+                "Gallons": "(quantity) => quantity / 40"
+            }
+        ],
+        "product": "Copeaux",
+        "dosage" : {
+            "Hectolitres" : "Kg",
+            "Gallons" : "Lb"
+        },
+        "quantity" : {
+            "Hectolitres": "Sacs (18kg)",
+            "Gallons": "Sacs (40 Lbs)"
+        }
+    },
+    {
+        "type" : "tbody",
+        "values" : [
+            "3-4 mois",
+            "Cubes",
+            {
+                "Hectolitres": "(volume, gpl) => (volume * 100) * gpl / 1000",
+                "Gallons": "(volume, gpl) => volume * gpl / 1000"
+            },
+            {
+                "Hectolitres": "(quantity) => quantity / 9",
+                "Gallons": "(quantity) => quantity / 20"
+            }
+        ],
+        "product": "Cubes",
+        "dosage" : {
+            "Hectolitres" : "Kg",
+            "Gallons" : "Lb"
+        },
+        "quantity" : {
+            "Hectolitres": "Sacs (9kg)",
+            "Gallons": "Sacs (20 Lbs)"
+        }
+    },
+    {
+        "type" : "tbody",
+        "values" : [
+            "4-5 mois",
+            "Dominos",
+            {
+                "Hectolitres": "(volume, gpl, percentage) => (gpl) ? gpl * (volume*100)/1000 : (2 / 100) * percentage * volume",
+                "Gallons": "(volume, gpl, percentage) => (gpl) ? gpl * volume / 1000 : ((4.4062452 / 100) * percentage * (volume / 26.4))"
+            },
+            {
+                "Hectolitres": "(quantity) => quantity / 9",
+                "Gallons": "(quantity) => quantity / 20"
+            }
+            
+        ],
+        "product": "Dominos",
+        "dosage" : {
+            "Hectolitres" : "Kg",
+            "Gallons" : "Lb"
+        },
+        "quantity" : {
+            "Hectolitres": "Sacs (9kg)",
+            "Gallons": "Sacs (20 Lbs)"
+        }
+    },
+    {
+        "type" : "tbody",
+        "values" : [
+            "5 mois",
+            "Blocks",
+            {
+                "Hectolitres": "(volume, gpl, percentage) => (gpl) ? gpl * (volume * 100) / 1000 : (2.5 / 100) * percentage * volume",
+                "Gallons": "(volume, gpl, percentage) => (gpl) ? gpl * volume / 1000 : ((5.5115566 / 100) * percentage * (volume / 26.4))"
+            },
+            {
+                "Hectolitres": "(quantity) => quantity / 9",
+                "Gallons": "(quantity) => quantity / 20"
+            }
+        ],
+        "product": "Blocks",
+        "dosage" : {
+            "Hectolitres" : "Kg",
+            "Gallons" : "Lb"
+        },
+        "quantity" : {
+            "Hectolitres": "Sacs (9kg)",
+            "Gallons": "Sacs (20 Lbs)"
+        }
+    },
+    {
+        "type" : "tbody",
+        "values" : [
+            "6-8 mois",
+            "Mini Thin Tank Staves",
+            {
+                "Hectolitres": "(volume, gpl, percentage) => (6/33) * percentage * volume",
+                "Gallons": "(volume, gpl, percentage) => (6/33) * percentage * (volume / 26.4)"
+            },
+            {
+                "Hectolitres": "(quantity) => quantity / 40",
+                "Gallons": "(quantity) => quantity / 40"
+            }
+        ],
+        "product": "Mini Thin Tank Staves",
+        "dosage" : {
+            "Hectolitres": "Staves",
+            "Gallons": "Staves"
+        },
+        "quantity" : {
+            "Hectolitres" : "Sacs infusion de 40 unités",
+            "Gallons" : "Sacs infusion de 40 unités"
+        } 
+    },
+    {
+        "type" : "tbody",
+        "values" : [
+            "6-8 mois",
+            "Thin Tank Staves",
+            {
+                "Hectolitres": "(volume, gpl, percentage) => (3/33) * percentage * volume",
+                "Gallons": "(volume, gpl, percentage) => (3/33) * percentage * (volume / 26.4)"
+            },
+            {
+                "Hectolitres": "(quantity) => quantity / 20",
+                "Gallons": "(quantity) => quantity / 20"
+            }
+        ],
+        "product": "Thin Tank Staves",
+        "dosage" : {
+            "Hectolitres": "Staves",
+            "Gallons": "Staves"
+        },
+        "quantity" : {
+            "Hectolitres" : "Paquets de 20 unités",
+            "Gallons" : "Paquets de 20 unités"
+        } 
+    },
+    {
+        "type" : "tbody",
+        "values" : [
+            "8-10 mois",
+            "Mini Tank Staves",
+            {
+                "Hectolitres": "(volume, gpl, percentage) => (4/33) * percentage * volume",
+                "Gallons": "(volume, gpl, percentage) => (4/33) * percentage * (volume / 26.4)"
+            },
+            {
+                "Hectolitres": "(quantity) => quantity / 40",
+                "Gallons": "(quantity) => quantity / 40"
+            }
+        ],
+        "product": "Mini Tank Staves",
+        "dosage" : {
+            "Hectolitres": "Staves",
+            "Gallons": "Staves"
+        },
+        "quantity" : {
+            "Hectolitres" : "Sacs infusion de 40 unités",
+            "Gallons" : "Sacs infusion de 40 unités"
+        } 
+    },
+    {
+        "type" : "tbody",
+        "values" : [
+            "8-10 mois",
+            "Tank Staves",
+            {
+                "Hectolitres": "(volume, gpl, percentage) => (2/33) * percentage * volume",
+                "Gallons": "(volume, gpl, percentage) => (2/33) * percentage * (volume / 26.4)"
+            },
+            {
+                "Hectolitres": "(quantity) => quantity / 20",
+                "Gallons": "(quantity) => quantity / 20"
+            }
+        ],
+        "product": "Tank Staves",
+        "dosage" : {
+            "Hectolitres": "Staves",
+            "Gallons": "Staves"
+        },
+        "quantity" : {
+            "Hectolitres" : "Paquets de 20 unités",
+            "Gallons" : "Paquets de 20 unités"
+        }
+    },
+    {
+        "type" : "tbody",
+        "values" : [
+            "10-12 mois",
+            "Winewood",
+            {
+                "Hectolitres": "(volume, gpl, percentage) => (1.5/33) * percentage * volume",
+                "Gallons": "(volume, gpl, percentage) => (1.5/33) * percentage * (volume / 26.4)"
+            },
+            {
+                "Hectolitres": "(quantity) => quantity / 10",
+                "Gallons": "(quantity) => quantity / 10"
+            }
+        ],
+        "product": "Winewood",
+        "dosage" : {
+            "Hectolitres": "Staves",
+            "Gallons": "Staves"
+        },
+        "quantity" : {
+            "Hectolitres" : "Paquets de 10 unités",
+            "Gallons" : "Paquets de 10 unités"
+        } 
+    },
+    {
+        "type" : "tbody",
+        "values" : [
+            "10-12 mois",
+            "Barrel Insert",
+            {
+                "Hectolitres": "(volume, gpl, percentage) => ((14/2.25) / 70) * percentage * volume",
+                "Gallons": "(volume, gpl, percentage) => ((14/2.25) / 70) * percentage * (volume / 26.4)"
+            },
+            {
+                "Hectolitres": "(quantity) => quantity / 14",
+                "Gallons": "(quantity) => quantity / 14"
+            }
+        ],
+        "product": "Barrel Insert",
+        "dosage" : {
+            "Hectolitres": "Staves",
+            "Gallons": "Staves"
+        },
+        "quantity" : {
+            "Hectolitres" : "Paquets de 14 unités",
+            "Gallons" : "Paquets de 14 unités"
+        } 
+    },
+    {
+        "type" : "tbody",
+        "values" : [
+            "6-12 mois",
+            "Oak Chain 18 pièces",
+            {
+                "Hectolitres": "(volume, gpl, percentage) => ((18/2.25) / 18) * percentage * volume",
+                "Gallons": "(volume, gpl, percentage) => ((18/2.25) / 18) * percentage * (volume / 26.4)"
+            },
+            {
+                "Hectolitres": "(quantity) => quantity / 18",
+                "Gallons": "(quantity) => quantity / 18"
+            }
+        ],
+        "product": "Oak Chain",
+        "dosage" : {
+            "Hectolitres": "Pièces",
+            "Gallons": "Pièces"
+        },
+        "quantity" : {
+            "Hectolitres": "Set de 18 pièces",
+            "Gallons": "Set de 18 pièces"
+        }
+    },
+    {
+        "type" : "tbody",
+        "values" : [
+            "6-12 mois",
+            "Oak Chain 34 pièces",
+            {
+                "Hectolitres": "(volume, gpl, percentage) => ((34/2.25) / 33) * percentage * volume",
+                "Gallons": "(volume, gpl, percentage) => ((34/2.25) / 33) * percentage * (volume / 26.4)"
+            },
+            {
+                "Hectolitres": "(quantity) => quantity / 34",
+                "Gallons": "(quantity) => quantity / 34"
+            }
+        ],
+        "product": "Oak Chain",
+        "dosage" : {
+            "Hectolitres": "Pièces",
+            "Gallons": "Pièces"
+        },
+        "quantity" : {
+            "Hectolitres" : "Set de 34 pièces",
+            "Gallons" : "Set de 34 pièces"
+        }
+    },
+    {
+        "type" : "tbody",
+        "values" : [
+            "18 mois",
+            "XL Stave",
+            {
+                "Hectolitres": "(volume, gpl, percentage) => (2/33) * percentage * volume",
+                "Gallons": "(volume, gpl, percentage) => (2/33) * percentage * (volume/26.4)"
+            },
+            {
+                "Hectolitres": "(quantity) => quantity / 10",
+                "Gallons": "(quantity) => quantity / 10"
+            }
+        ],
+        "product": "XL Stave",
+        "dosage" : {
+            "Hectolitres": "Staves",
+            "Gallons": "Staves"
+        },
+        "quantity" : {
+            "Hectolitres" : "Paquets de 10 unités",
+            "Gallons" : "Paquets de 10 unités"
+        }
+    }
+]

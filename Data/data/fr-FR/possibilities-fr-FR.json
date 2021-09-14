@@ -39,10 +39,10 @@
             "next": {
                 "type": "product",
                 "values" : {
-                    "Winewood": {
+                    "Mini Tank Staves / Tank Staves": {
                         "rootNext" : true
                     },
-                    "Mini Tank Staves / Tank Staves": {
+                    "Winewood": {
                         "rootNext" : true
                     },
                     "XL Stave" : {

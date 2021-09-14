@@ -1,0 +1,38 @@
+{
+    "calc": {
+        "text": "CALCULATEUR",
+        "logoImg": {
+            "src": "images/logo.png",
+            "width": 182,
+            "height" : 181
+        },
+        "hiddenImg" : "images/thermo.png",
+        "macaronImg" : "images/Products/macaron_chauffes_FR.jpg"
+    },
+    "home": {
+        "text": "Un outil simple et pratique qui vous guidera dans le choix de vos produits de boisage œnologique.",
+        "img": {
+            "src": "images/Logo-OAI-négatif-sans-fond.png",
+            "width": 180,
+            "height": 250
+        },
+        "redirectDelay": 4000
+    },
+    "footer": {
+        "contactText": "Contact",
+        "mail": {
+            "text": "oai@nadalie.fr",
+            "link": "oai@nadalie.fr"
+        },
+        "tel": {
+            "text": "05 57 88 04 42",
+            "link": "+33557880442"
+        }
+    },
+    "pwaModal": {
+        "button": "Installer l'application",
+        "title": "Installer l'Application Oak Add Ins",
+        "install": "Installer",
+        "deny": "Peut être plus tard"
+    }
+}

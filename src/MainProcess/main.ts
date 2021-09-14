@@ -8,7 +8,6 @@ import { DataEditor } from "./DataEditor";
     electron: require(path.join(__dirname, `../../node_modules/electron`))
 });*/
 
-
 function createWindow() 
 {
 	// Create the browser window.

@@ -1,3 +1,12 @@
+/** /!\ ATTENTION /!\
+ * 
+ * Ce fichier n'est plus utilisé, le suport des fichier .js en input de données est toujours d"acctualité
+ * et fonctionne toujours de la même manière mais il sont trop créateurs de problèmes avec l'outils de modification de données
+ * et donc j'ai choisi de ne plus les utiliser
+ * 
+ * /!\ ATTENTION /!\
+ */
+
 /**
  * Les fichier de données en .js on pour but de pouvoir intègrer ce qui n'est pas possible en json, 
  * dans ce cas précis c'est pour pouvoir utiliser de petits callback dans les données que ce fichier a été créé.
@@ -112,7 +121,7 @@
             dosage : volumeTypes.dosage,
             quantity : volumeTypes.sac18
         },
-        {
+        /*{
             "type" : "tbody",
             "values" : [
                 "Durée de la fermentation", // "Fermentation time"
@@ -129,12 +138,12 @@
             product: "Mixture",
             dosage : volumeTypes.dosage,
             quantity : volumeTypes.sac18
-        },
+        },*/
         {
             "type" : "tbody",
             "values" : [
                 "Durée de la fermentation", // "Fermentation time"
-                "Fine de chêne", // "Oak Fine"
+                "Fine de Chêne", // "Oak Fine"
                 {
                     "Hectolitres": (volume, gpl) => (volume * 100) * gpl / 1000,
                     "Gallons": (volume, gpl) => volume * gpl / 1000,
@@ -144,7 +153,7 @@
                     "Gallons": (quantity) => quantity / 40,
                 },
             ],
-            product: "Fine de chêne",
+            product: "Fine de Chêne",
             dosage : volumeTypes.dosage,
             quantity : volumeTypes.sac18
         },
@@ -231,7 +240,7 @@
             "type" : "tbody",
             "values" : [
                 "6-8 mois", // "6-8 month"
-                "Mini Thin Tank Stave", // "Mini Thin Tank Stave"
+                "Mini Thin Tank Staves", // "Mini Thin Tank Stave"
                 {
                     "Hectolitres": (volume, gpl, percentage) => (6/33) * percentage * volume,
                     "Gallons": (volume, gpl, percentage) => (6/33) * percentage * (volume / 26.4),
@@ -241,7 +250,7 @@
                     "Gallons": (quantity) => quantity / 40,
                 }
             ],
-            product: "Mini Thin Tank Stave",
+            product: "Mini Thin Tank Staves",
             dosage : volumeTypes.staves,
             quantity : volumeTypes.sacI40u 
         },
@@ -249,7 +258,7 @@
             "type" : "tbody",
             "values" : [
                 "6-8 mois", // "6-8 month"
-                "Thin Tank Stave", // "Thin Tank Stave"
+                "Thin Tank Staves", // "Thin Tank Staves"
                 {
                     "Hectolitres": (volume, gpl, percentage) => (3/33) * percentage * volume,
                     "Gallons": (volume, gpl, percentage) => (3/33) * percentage * (volume / 26.4),
@@ -259,7 +268,7 @@
                     "Gallons": (quantity) => quantity / 20
                 }
             ],
-            product: "Thin Tank Stave",
+            product: "Thin Tank Staves",
             dosage : volumeTypes.staves,
             quantity : volumeTypes.paq20u 
         },
@@ -371,7 +380,7 @@
             dosage : volumeTypes.pieces,
             quantity : volumeTypes.set34p
         },
-        {
+        /*{
             "type" : "tbody",
             "values" : [
                 "14-16 mois", // "14-16 month"
@@ -388,7 +397,7 @@
             product: "Wineplank",
             dosage : volumeTypes.staves,
             quantity : volumeTypes.paq5u
-        },
+        },*/
         {
             "type" : "tbody",
             "values" : [

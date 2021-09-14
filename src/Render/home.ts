@@ -17,10 +17,11 @@ window.addEventListener('DOMContentLoaded', () =>
         let header = 
         `<thead>
             <tr>
-                <th scope="col">name</th>
-                <th scope="col">Display Mode</th>
-                <th scope="col">type</th>
-                <th scope="col"></th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Display Mode</th>
+                <th>Type</th>
+                <th></th>
             </tr>
         </thead>`;
 
@@ -31,9 +32,10 @@ window.addEventListener('DOMContentLoaded', () =>
             body += 
             `<tr>
                 <td>${dataFile.name}</td>
+                <td>${dataFile.description}</td>
                 <td>${dataFile.displayMode}</td>
-                <td>${dataFile.type}</td>   
-                <td><a class="btn btn-light" href="${__dirname}/${dataFile.displayMode}.html">Edit</a></td>
+                <td>${dataFile.type}</td>
+                <td><a class="btn btn-light" href="${__dirname}\\${'editor'/*dataFile.displayMode*/}.html?currentFile=${dataFile.displayMode}">Edit</a></td>
             </tr>`;
         }
 

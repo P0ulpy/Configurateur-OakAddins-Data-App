@@ -12,18 +12,23 @@ export interface DataFile {
     name: string,
     type: 'js' | 'json',
     displayMode: string,
-    data: any
+    description: string,
+    data: any,
+    struct: any
 }
 
 export interface DataFileRaw {
     name: string,
     type: 'js' | 'json',
-    data: any
+    data: any,
+    struct: any
 }
 
 export interface DataStruct {
     name: string,
-    displayMode: string
+    description: string,
+    displayMode: string,
+    struct: string
 };
 
 export interface FilesLoaderInputs {
@@ -85,10 +90,10 @@ export class FilesLoader extends EventEmitter {
 
         this.emit('loaded');
     }
-
+    
     private parseDataStruct(): DataStruct[]
     {
-        if(!this.dataEditor.lang && typeof this.dataEditor.lang !== 'string')
+        if(!this.dataEditor.lang || typeof this.dataEditor.lang !== 'string')
         {
             throw Error("lang is not defined can't parse dataStruct");
         }
@@ -99,7 +104,9 @@ export class FilesLoader extends EventEmitter {
         {
             dataStruct.push({
                 name: data.name.replace('${lang}$', this.dataEditor.lang),
-                displayMode: data.displayMode
+                description: data.description,
+                displayMode: data.displayMode,
+                struct: data.struct
             });
         }
         
@@ -125,6 +132,7 @@ export class FilesLoader extends EventEmitter {
 
                     dataFile.type = 'json';
                     dataFile.data = JSON.parse(dataFileBuffer.toString());
+
                     break;
                 
                 case 'text/javascript': 
@@ -162,8 +170,10 @@ export class FilesLoader extends EventEmitter {
                     dataFiles.push({
                         displayMode: dataStruct.displayMode,
                         name: dataStruct.name,
+                        description: dataStruct.description,
                         type: datafileRaw.type,
-                        data: datafileRaw.data
+                        data: datafileRaw.data,
+                        struct: JSON.parse(fs.readFileSync(path.join(__dirname, '../../../', process.env.DATA_PATH as string, dataStruct.struct)).toString())
                     });
                 }
             }

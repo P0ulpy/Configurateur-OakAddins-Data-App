@@ -1,12 +1,11 @@
 import { rendererPath } from "./DataEditor";
+import { DataFile } from "./FilesManagement/FilesLoader";
 
 // It has the same sandbox as a Chrome extension.
 window.addEventListener("DOMContentLoaded", () => {
 
     const electron = require('electron');
     const shared = electron.remote.getGlobal('shared');
-
-    console.log(shared.dataFiles);
     
     const navContainer = document.createElement('nav');
     navContainer.classList.add('navbar', 'navbar-expand-lg', 'navbar-light', 'bg-light');
@@ -45,9 +44,9 @@ window.addEventListener("DOMContentLoaded", () => {
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">`;
 
-        for(const file of shared.dataFiles)
+        for(const file of shared.dataFiles as DataFile[])
         {
-            dropDown += `<li><a class="dropdown-item" href="${rendererPath}/${file.displayMode}.html">${file.name}</a></li>`
+            dropDown += `<li><a class="dropdown-item" href="${rendererPath}\\${file.displayMode}.html?currentFile=${file.displayMode}">${file.name}</a></li>`
         }
 
         dropDown += '</ul></li>';

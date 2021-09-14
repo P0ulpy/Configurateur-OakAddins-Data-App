@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8" />
-	<title>string-list</title>
+	<title>global-config</title>
 
 	<!--
 	<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
@@ -19,15 +19,21 @@
 
 <body>
 
-	<div class="container">
+	<div class="container" id="editor-container">
 		<div class="spinner-border d-block mx-auto" role="status">
 			<span class="visually-hidden">Loading...</span>
 		</div>
 	</div>
 
+	<div class="container">
+		
+	</div>
+
 	<footer>
-		<script src="../dist/Render/Tools/formValidationDynamicDesign.js"></script>
-		<script src="../dist/Render/Viewers/stringListView.js"></script>
+		<!--<script src="../dist/Render/Tools/formValidationDynamicDesign.js"></script>-->
+		<!--<script src="../dist/Render/Viewers/stringListView.js"></script>-->
+		<script src="../dist/Render/Tools/parametersParser.js"></script>
+		<script src="../dist/Render/Viewers/viewLoader.js"></script>
 	</footer>
 
 </body>

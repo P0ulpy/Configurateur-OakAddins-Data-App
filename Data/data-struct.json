@@ -1,6 +1,8 @@
 [
     {
-        "name": "choices-${lang}$.json",
-        "displayMode": "string-list"
+        "name": "config-${lang}$.json",
+        "description": "Options globale du configurateur",
+        "displayMode": "global-config",
+        "struct": "./global-config.json"
     }
 ]
